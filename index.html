@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Popular Movie</title>
+  <link rel="icon" type="image/x-icon" href="img/icon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    .navbar-before-scroll .nav-link,
+    .navbar-before-scroll .navbar-toggler-icon {
+      color: #fff;
+    }
+
+    .navbar-after-scroll .nav-link,
+    .navbar-after-scroll .navbar-toggler-icon {
+      color: #4f4f4f;
+    }
+
+    .navbar-after-scroll {
+      background-color: #fff;
+    }
+
+    /* 動畫 Transition after scrolling */
+    .navbar-after-scroll {
+      transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
+
+    /* 動畫 Transition to the initial state */
+    .navbar-before-scroll {
+      transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
+
+    /*  滾動時導覽列高度變化 */
+    .navbar.navbar-before-scroll.navbar-after-scroll {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    @media (max-width: 991.98px) {
+      #main-navbar {
+        background-color: #fff;
+      }
+
+      .nav-link,
+      .navbar-toggler-icon {
+        color: #4f4f4f !important;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .rotate-lg {
+        transform: rotate(6deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="mb-10">
+    <!-- ------------s01------------ -->
+    <div class="s01"></div>
+    <nav id="main-navbar" class="navbar navbar-expand-md fixed-top navbar-before-scroll shadow-0">
+      <div class="container-fluid">
+
+        <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <a class="navbar-brand me-1" href="#"><img src="img/logo.png" height="20px" alt="Logo" loading="lazy" /></a>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#s05">熱門電影</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#s07">近期上映新片</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#s08">熱門影音串流</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#s09">聯絡我們</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a class="nav-link pe-2" href="#!">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#!">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#!">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ps-2" href="#!">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- ------------s02------------ -->
+    <section id="s02">
+      <div class="container-fluid px-0">
+        <div class="row g-0">
+          <div class="col-lg-6 vh-100 d-flex flex-column justify-content-center align-items-center">
+            <div class="h-100 d-flex justify-content-center align-items-center px-5">
+              <div class="">
+                <h2 class="display-4" data-mdb-animation-init data-mdb-animation-start="onLoad"
+                  data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false" data-mdb-animation-delay="200">
+                  熱門電影</h2>
+                <h1 class="display-2 fw-bold text-uppercase" data-mdb-animation-init data-mdb-animation-start="onLoad"
+                  data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false" data-mdb-animation-delay="400">
+                  Popular Movie</h1>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center w-100 justify-content-between  px-5 mb-5" data-mdb-animation-init
+              data-mdb-animation-start="onLoad" data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false"
+              data-mdb-animation-delay="600">
+              <a class="btn btn-primary btn-lg btn-rounded" href="#s03" role="button" data-mdb-ripple-init>更多資訊<i
+                  class="fas fa-angle-down ms-2"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-none d-lg-inline-block vh-100">
+            <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel"
+              data-mdb-carousel-init>
+              <div class="carousel-indicators">
+                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0"
+                  class="rounded-circle active" style="width: 7px; height: 7px" aria-current="true"
+                  aria-label="Slide 1"></button>
+                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1" aria-label="Slide 2"
+                  class="rounded-circle" style="width: 7px; height: 7px"></button>
+                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2" aria-label="Slide 3"
+                  class="rounded-circle" style="width: 7px; height: 7px"></button>
+              </div>
+
+              <div class="carousel-inner shadow-5-strong" style="border-bottom-left-radius: 4rem">
+                <div class="carousel-item active">
+                  <img src="img/indulgexpress_2024-04_9d0fb46b-da54-4545-b1a2-85d348905785_Untitled_design__11_.avif"
+                    class="d-block vh-100 vw-100 object-cover" alt="15 years of experience in the IT industry" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>獅子王：木法沙</h5>
+                    <p>2024-12-19上映</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="img/999a11defc22cadcefbea8cbffa683dc.jpeg" class="d-block vh-100 vw-100 object-cover"
+                    alt="243 completed projects" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>海洋奇緣2</h5>
+                    <p>2024-11-28上映</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="img/MV5BZDMyYWU4NzItZDY0MC00ODE2LTkyYTMtMzNkNDdmYmFhZDg0XkEyXkFqcGc@._V1_.jpg"
+                    class="d-block vh-100 vw-100 object-cover" alt="53 satisfied customers" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>猛毒最終章：LAST DANCE</h5>
+                    <p>2024-10-23上映</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample"
+                data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample"
+                data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- ------------s03------------ -->
+  <section id="s03"
+    style="background-image: url(img/movie.webp); background-size: cover; background-position: center center; background-attachment: fixed;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-light">
+          <h2>
+            <p>《腦筋急轉彎 2》故事提要</p>
+          </h2>
+
+        </div>
+        <div class="col-md-8 text-white">
+          <p style="text-indent: 2em;">睽違 9 年，榮獲奧斯卡「最佳動畫片」殊榮的《腦筋急轉彎》，終於在近日推出續集《腦筋急轉彎
+            2》，過去皮克斯曾被指出欲振乏力，遲遲無法突破過去窠臼，而《腦筋急轉彎》以寓教於樂的故事將皮克斯拉回水平線，甚至被許多影評人認為是皮克斯史上最出彩之作，有了首集好口碑支撐，續集也更令人期待，上映後也獲得一致好評！
+          </p>
+          <p style="text-indent: 2em;">
+            進入青春期的萊莉，感受變得更大，情緒也變得更多，大腦總部除了原先班底，也加入了厭世阿廢、害羞阿羞、焦慮阿焦以及羨慕阿慕。這次，萊莉與好友葛蕾絲與布麗前往曲棍球訓練營，原本興奮的心情在得知兩位好友即將轉學的消息而變得低落，除了要證明自己的實力來獲得教練的肯定進入夢寐以求的球隊，更在舊朋友與新朋友之間拉扯，而首度感受到新情緒的萊莉也因此變得不知所措。
+          </p>
+          <p style="text-indent: 2em;">《腦筋急轉彎
+            2》延續首集的繽紛多彩及明快節奏，在觀影時就像進入萊莉腦內的彩色風暴，跟她一同感受青春期的複雜與混亂，相信只要曾經度過青春期的觀眾，都能夠共鳴萊莉為什麼一秒內會有十個小劇場，我們厭世父母的嘮叨、羨慕風雲人物的光芒、害羞自己不夠酷，而更多的是，焦慮自己不夠好，而這一切都始於
+            —— 渴望被認同。</p>
+          <p style="text-indent: 2em;">揮別童年單純又直接的情緒，青春期階段正在以舊情緒與新情緒建構新的自我意識，原本深信不疑的舊有自我意識受到新情緒的衝擊，舊情緒小隊深信原有的意識「I’m a
+            good person」才是真正的萊莉，新情緒小隊則主張必須用新的意識「I’m not good
+            enough」才能讓萊莉有危機意識進而適應新生活，腦中洶湧的意識流掀起滔天巨浪，萊莉開始自我懷疑，感受到一個全然陌生的自己，但是隨著兩隊的抗爭越演越烈，萊莉也漸漸走向失控，一直自信的樂樂也終於誠實的說出「我不知道（該怎麼辦）」，而一直認為能夠掌控機台保護萊莉的阿焦也對事情的演變慌張錯愕。
+          </p>
+          <p style="text-indent: 2em;">
+            「我不知道」，是不是一個你我都非常熟悉的情緒呢，小時候，我們總以為長大了就能掌握自己的人生，對所有挑戰都能游刃有餘，但事實不然，任誰都有不知道該怎麼辦的時候，而這個時候我們最常有的情緒就是阿焦跑出來自責自己的不足，甚至可能會大到反噬自己，但《腦筋急轉彎
+            2》正是想讓觀眾知道，沒關係的，因為這就是人生啊，會有不知道怎麼辦的時候，會有無法掌控的時候，你可以不用永遠是所有向無敵的鐵金剛，允許自己會脆弱無助，不用永遠正面積極，像樂樂告訴緊握控制桿的阿焦那句：「放手吧」，讓心裡的阿焦暫時離線，請阿廢出馬一下。
+          </p>
+          <p style="text-indent: 2em;">
+            新、舊情緒看似是對立面，但其實他們的出發點都是希望萊莉過得很好，兩組小隊的想法也都沒有錯，只是人不可能永遠不變，隨著各式各樣的經歷，我們會不斷成為新的樣子，長出不同的自我意識，你不會只有 good person
+            的一面，也不應該用 not good enough 自我否定來強迫自己成長。</p>
+          <p style="text-indent: 2em;">續集最怕後繼無力的硬傷，但《腦筋急轉彎
+            2》以簡單歡快的故事，穿插皮克斯最擅長的可愛幽默，讓觀眾在又哭又笑的同時，擁抱自己的負面情緒，治癒心中的阿焦，當然，也把樂樂變成無限大！</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------s04------------ -->
+  <section id="s04" class="s07 bg-success bg-opacity-25" style="position: relative;">
+    <div class="row">
+      <div class="col-md-5 bg-image wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="0s"
+        data-wow-iteration="1" style="position: absolute;
+            background-image: url(img/m04.jpg); 
+            top: 0; 
+            bottom: 0;"></div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-7 my-5 s07_text">
+          <div class="h3">變形金剛：源起</div>
+          <p>《變形金剛 : 源起》由派拉蒙動畫（Paramount Animation）與孩之寶（Hasbro）出品，並與New Republic Pictures合作，唐·墨菲（Don Murphy）、湯姆·德桑托（Tom
+            DeSanto）、A di Bonaventura Pictures 和A Bay Films聯合製作。這部電影不僅在技術層面上極具挑戰性，也承載了許多變形金剛粉絲的期望，勢必成為年度話題之作。</p>
+          <button type="button" class="btn btn-outline-info"
+            onclick="window.location.href='https://youtube.com/watch?v=KRYOSXVZMg0';">觀看預告片</button>
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <div class="h3">星光熠熠的配音陣容</div>
+              <p>
+                《黑寡婦》史嘉蕾喬韓森、《雷神索爾》克里斯漢斯沃、《捍衛戰士:獨行俠》喬漢姆、《超級瑪利歐兄弟電影版》基根麥可奇、《蜘蛛人:穿越新宇宙》布萊恩泰瑞亨利、《捍衛任務 4》勞倫斯費許朋等人配音。
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="h3">其他角色與配音演員</div>
+              <p>
+                除了主角配音，還有一眾實力派演員加盟。基根·麥可·奇（Keegan-Michael Key）將聲演B-127／大黃蜂（B-127 / Bumblebee），史嘉蕾·喬韓森（Scarlett
+                Johansson）為艾莉塔（Elita）配音，勞倫斯·費許朋（Laurence Fishburne）聲演鈦師傅（Alpha Trion），喬·漢姆（Jon Hamm）則將御天至尊（Ultra
+                Magnus）詮釋得淋漓盡致。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------s05------------ -->
+  <div id="s05">
+    <br><br><br><br>
+  </div>
+
+  <main>
+    <div class="container">
+      <section class="mb-10 text-center">
+        <h2 class="fw-bold mb-7 text-center">熱門電影</h2>
+        <div class="row gx-lg-5">
+          <div class="col-lg-4 col-md-12 mb-6 mb-lg-0">
+
+            <div class="card rounded-6 h-100" data-mdb-animation-init data-mdb-animation-start="onScroll"
+              data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false" data-mdb-animation-delay="200">
+              <div class="mt-n3 bg-image hover-overlay mx-3 shadow-4-strong rounded-6" data-mdb-ripple-init
+                data-mdb-ripple-color="light" data-mdb-modal-init data-mdb-target="#project-1">
+                <img src="img/30277709.jpg" class="w-100" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">異形：羅穆路斯</h5>
+                <p class="text-muted">
+                  <small>上映日期 <u>2024/08/15</u> by
+                    <a href="" class="text-dark">20th Century Studios</a></small>
+                </p>
+                <p class="card-text">
+                  科幻經典深入探索恐懼根源！
+                  恐怖直達深處的電影體驗！
+                  「異形之父」金獎大導 雷利史考特 監製
+                  《暫時停止呼吸》驚悚鬼才導演 費德阿瓦雷茲 執導
+
+                  年輕的太空殖民者 意外揭曉宇宙中最可怕的生命形式……
+
+                  這次將帶觀眾回到系列的根源，由異形之父，金獎大導雷利史考特監製，找來曾拍攝《暫時停止呼吸》、《屍變》驚悚鬼才導演費德阿武雷茲執導。故事描述一群年輕的太空殖民者在一艘廢棄的太空站進行拆解時，將揭密宇宙中最可怕的生命形式…
+                </p>
+                <a href="#!" class="btn btn-secondary btn-rounded" data-mdb-ripple-init>Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-6 mb-lg-0">
+            <div class="card rounded-6 h-100" data-mdb-animation-init data-mdb-animation-start="onScroll"
+              data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false" data-mdb-animation-delay="400">
+              <div class="mt-n3 bg-image hover-overlay mx-3 shadow-4-strong rounded-6" data-mdb-ripple-init
+                data-mdb-ripple-color="light" data-mdb-modal-init data-mdb-target="#project-2">
+                <img src="img/images.jfif" class="w-100" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">角頭－大橋頭</h5>
+                <p class="text-muted">
+                  <small>上映日期 <u>2024/08/16</u> by
+                    <a href="" class="text-dark">威視電影</a></small>
+                </p>
+                <p class="card-text">
+                  Michael哥（王陽明 飾）回來了，他「跟天借膽」 ，帶著瘋蠍子（張懷秋 飾）想拿下頂莊、北城、北館，在貴董（高捷 飾）、哈達（太保 飾）、勇桑（蔡振南
+                  飾）的眼皮子底下賣藥，甚至想仗著自己幾分交情，拉攏勇桑的二把手清楓（孫鵬 飾），沒想到被打得灰頭土臉， 卻在這時，他看不上眼的土狗們阿猛（施名帥 飾）、阿慶（鄭人碩 飾）、宗保（張再興
+                  飾），竟然能闖入仁哥（王識賢 飾）、憨春（陳萬號 飾）的賭場，搶下巨款，還活著回來，讓他又驚又喜。
+                </p>
+                <a href="#!" class="btn btn-secondary btn-rounded" data-mdb-ripple-init>Read more</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 mb-6 mb-lg-0">
+            <div class="card rounded-6 h-100" data-mdb-animation-init data-mdb-animation-start="onScroll"
+              data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false" data-mdb-animation-delay="600">
+              <div class="mt-n3 bg-image hover-overlay mx-3 shadow-4-strong rounded-6" data-mdb-ripple-init
+                data-mdb-ripple-color="light" data-mdb-modal-init data-mdb-target="#project-3">
+                <img src="img/images (1).jfif" class="w-100" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">死侍與金鋼狼</h5>
+                <p class="text-muted">
+                  <small>上映日期 <u>2024/07/24</u> by
+                    <a href="" class="text-dark">Marvel</a></small>
+                </p>
+                <p class="card-text">
+                  史上最另類超級英雄、語不驚人死不休的死侍睽違六年終於萬眾矚目重返大銀幕，更首度加入漫威電影宇宙！除了與老搭檔鋼人、青少女彈頭和雪緒再度聚首，更將與睽別15年的金鋼狼二度並肩作戰再續兄弟情，時間變異管理局找上門帶走他也老神在在，並自認只有自己能當漫威救世主，改寫漫威電影宇宙！
+                </p>
+                <a href="#!" class="btn btn-secondary btn-rounded" data-mdb-ripple-init>Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ------------s06------------ -->
+      <section class="">
+        <div class="modal fade" id="project-1" tabindex="-1" aria-labelledby="project-1Label" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="project-1Label">異形：羅穆路斯</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <section>
+
+                  <div class="row gx-lg-5 align-items-center">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                      <div class="bg-image ripple rounded-7 shadow-5-strong" data-mdb-ripple-init
+                        data-mdb-ripple-color="light">
+                        <img src="img/alien-rom-facehugger-1sht-4c-666010837369b.jpg" class="w-100" />
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                              <div class="px-4 py-5 px-md-5 text-white text-center">
+                                <h3 class="text-uppercase fw-bold mb-4">
+                                  異形：羅穆路斯
+                                </h3>
+                                <p class="mb-0" style="color: hsl(210, 12%, 80%)">
+                                  《異形：羅穆路斯》（英語：Alien:
+                                  Romulus）是一部2024年美英合拍的科幻恐怖片，《異形系列》的第七部電影作品，也是故事時間線介於1979年電影《異形》與1986年續集《異形2》之間的獨立間傳。該片由費德·阿瓦雷茲執導，阿瓦雷茲和羅多·薩亞格斯共同編劇，主演陣容包括卡莉·史派妮、大衛·榮松、阿奇·雷諾斯、伊莎貝拉·莫娜、史派克·費恩和艾琳·吳。
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(204, 30%, 20%)">
+                            <i class="fas fa-memory fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">劇情</p>
+                          <p class="text-muted mb-0">
+                            該片的事件設定於《異形》和《異形2》之間，2142年，一群年輕的太空殖民者與拾荒者在一座廢棄的太空站遭遇宇宙中最恐怖的生命體。
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(204, 30%, 20%)">
+                            <i class="fas fa-users fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">演員</p>
+                          <p class="text-muted mb-0">
+                            卡莉·史派妮 飾演 瑪麗·蕾恩·「小雨」·卡拉定（Marie Raines "Rain" Carradine）、大衛·榮松 飾演 安迪（Andy）、阿奇·雷諾斯 飾演
+                            泰勒·哈里遜（Tyler Harrison）、伊莎貝拉·莫娜 飾演 凱·哈里遜（Kay Harrison）、史派克·費恩 飾演 比約恩（Bjorn）、艾琳·吳（Aileen Wu）
+                            飾演 娜瓦羅（Navarro）、丹尼爾·貝茲 聲演 飾演盧克（Rook），本角色的外型基於《異形》中飾演人造人艾許的伊恩·霍姆、崔佛·紐林（Trevor Newlin）飾演
+                            異形（Xenomorph）、勞勃·伯布羅茲基 飾演 「後裔」（Offspring）。
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(204, 30%, 20%)">
+                            <i class="fas fa-photo-film fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">製作</p>
+                          <p class="text-muted mb-0">
+                            華特迪士尼公司收購21世紀福斯後，在2019年CinemaCon上正式確認正在開發一部新的《異形》電影。2022年3月，宣布該片由費德·阿瓦雷茲編導，雷利·史考特製片。據透露該片劇情將與此前的《異形》電影無關，並將於Hulu上線。2022年11月，卡莉·史派妮正在洽談出演電影。2022年12月，據透露該片暫名為《異形：羅穆路斯》（Alien:
+                            Romulus）。2023年3月，伊莎貝拉·莫娜參演。同月，大衛·榮松、阿奇·雷諾斯、史派克·費恩和艾琳·吳（Aileen
+                            Wu）參演。2023年11月，史派妮稱該片的事件設定於《異形》（1979年）和《異形2》（1986年）之間。
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(204, 30%, 20%)">
+                            <i class="fas fa-video fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">拍攝</p>
+                          <p class="text-muted mb-0">
+                            該片於2023年3月9日在布達佩斯開始進行主體拍攝，7月3日結束。加洛·奧利瓦雷斯（Galo Olivares）擔任攝影師。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-mdb-ripple-init
+                  data-mdb-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="project-2" tabindex="-1" aria-labelledby="project-2Label" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="project-2Label">角頭－大橋頭</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- Section: Design Block -->
+                <section>
+
+                  <div class="row gx-lg-5 align-items-center">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                      <div class="bg-image ripple rounded-7 shadow-5-strong" data-mdb-ripple-init
+                        data-mdb-ripple-color="light">
+                        <img src="img/454581860_815413404038635_4661343792630461096_n.jpg" class="w-100" />
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                              <div class="px-4 py-5 px-md-5 text-white text-center">
+                                <h3 class="text-uppercase fw-bold mb-4">
+                                  角頭－大橋頭
+                                </h3>
+                                <p class="mb-0" style="color: hsl(210, 12%, 80%)">
+                                  Michael哥（王陽明 飾）回來了，他「跟天借膽」 ，帶著瘋蠍子（張懷秋 飾）想拿下頂莊、北城、北館，在貴董（高捷 飾）、哈達（太保 飾）、勇桑（蔡振南
+                                  飾）的眼皮子底下賣藥，甚至想仗著自己幾分交情，拉攏勇桑的二把手清楓（孫鵬 飾），沒想到被打得灰頭土臉， 卻在這時，他看不上眼的土狗們阿猛（施名帥 飾）、阿慶（鄭人碩
+                                  飾）、宗保（張再興 飾），竟然能闖入仁哥（王識賢 飾）、憨春（陳萬號 飾）的賭場，搶下巨款，還活著回來，讓他又驚又喜。
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(0, 63%, 44%)">
+                            <i class="fas fa-memory fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">劇情</p>
+                          <p class="text-muted mb-0">
+                            「大橋頭」第二代公子Michael虎視眈眈想要重整角頭的新秩序，帶著瘋蠍子想拿下頂莊、北城、北館，在貴董、哈達、勇桑的眼皮子底下賣藥，沒想到被打得灰頭土臉，卻在這時，他看不上眼的「土狗幫」，竟然能闖入仁哥、憨春的賭場，搶下巨款，還活著回來，讓他又驚又喜...
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(0, 63%, 44%)">
+                            <i class="fas fa-users fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">演員</p>
+                          <p class="text-muted mb-0">
+                            蔡振南、龍天翔、喜翔、高捷、太保、夏靖庭、孫鵬、王識賢、王陽明、張懷秋、施名帥、鄭人碩、張再興、黃尚禾、吳震亞、唐振剛、李銘忠、陳萬號
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(0, 63%, 44%)">
+                            <i class="fas fa-photo-film fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">製作</p>
+                          <p class="text-muted mb-0">
+                            2015年，《角頭》第一部上映時，雖然票房不俗，又有堅強的卡司，但在劇情上有一些沒交代清楚的地方。然而，隨著系列的發展，劇組逐步完善了故事背景和角色設定。後來的《角頭2：王者再起》和《角頭－浪流連》不僅成功補充了前作的不足，還提升了整個系列的深度和真實感，更是接連創下票房新高，分別獲得了8000萬、1.27億與1.6億的亮眼成績。
+                            這次的《角頭－大橋頭》以前傳的方式呈現，不僅解答了系列中的許多問題，還在製作上達到了新的高峰。無論是劇情設計、角色刻畫，還是打鬥場面，都堪稱是系列中最強的一部。觀眾們可以期待在這部作品中看到更加緊湊的故事、更真實的黑幫生活細節，以及更加震撼的動作場面。
+
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(0, 63%, 44%)">
+                            <i class="fas fa-video fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">拍攝</p>
+                          <p class="text-muted mb-0">
+                            查無資訊。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Section: Design Block -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-mdb-ripple-init
+                  data-mdb-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="project-3" tabindex="-1" aria-labelledby="project-3Label" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="project-3Label">死侍與金鋼狼</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- Section: Design Block -->
+                <section>
+
+                  <div class="row gx-lg-5 align-items-center">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                      <div class="bg-image ripple rounded-7 shadow-5-strong" data-mdb-ripple-init
+                        data-mdb-ripple-color="light">
+                        <img src="img/死侍與金鋼狼-正式款海報-66a21e742a2db.avif" class="w-100" />
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                              <div class="px-4 py-5 px-md-5 text-white text-center">
+                                <h3 class="text-uppercase fw-bold mb-4">
+                                  死侍與金鋼狼
+                                </h3>
+                                <p class="mb-0" style="color: hsl(210, 12%, 80%)">
+                                  在2016年電影《惡棍英雄：死侍》取得商業成功後，二十世紀福斯開始開發兩部續集電影。2019年3月，在迪士尼完成收購21世紀福斯後，《死侍3》的製作工作被擱置，死侍的影視控制權移交給漫威影業，該角色將加入漫威電影宇宙之中，同時保持限制級的分級。
+                                  <br>
+                                  《死侍與金鋼狼》排定2024年7月22日於大衛·H·寇克劇院首映，並在2024年7月26日於美國上映。電影在影評界獲得正面為主的評價，正面的評論讚揚動作場面、配樂、萊恩·雷諾斯和休·傑克曼的演出表現，幽默感則獲得兩極反應，部分影評家詬病編劇和仰賴粉絲情懷服務的內容。
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(260, 84%, 43%)">
+                            <i class="fas fa-memory fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">劇情</p>
+                          <p class="text-muted mb-0">
+                            在2018年，韋德·威爾森使用機堡的時光錶從他所屬的10005號宇宙前往616號宇宙（即神聖時間線），他向快樂·霍根請求加入復仇者，但遭到拒絕。
+                            <br>
+                            六年後，韋德從死侍的身份退休，並在與女友凡妮莎分手後成為了一名二手車銷售員。在韋德的生日派對上，時間變異管理局探員悖論先生派人捉走了韋德，並邀請他加入616號宇宙。韋德對此十分興奮，並穿上戰鬥服再度成為死侍。但悖論先生透露，金鋼狼是10005號宇宙的定錨者[3][註
+                            3]，由於金鋼狼之死，這個宇宙正在慢慢步向滅亡。他表示，因為時變局近期改變了政策，不再主動刪減時間線，因此他打算親自加速這個宇宙的滅亡。死侍不想失去他的家和朋友，於是偷走了悖論先生的「時光平板」，走到金鋼狼的墓前試圖復活他，但只發現一具亞德曼骨骼屍體，死侍於是穿越多元宇宙尋找金鋼狼的變體，以取代他的宇宙的金鋼狼。
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(260, 84%, 43%)">
+                            <i class="fas fa-users fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">演員</p>
+                          <p class="text-muted mb-0">
+                            萊恩雷諾斯（Ryan Reynolds）、休傑克曼（Hugh Jackman）、羅布德萊尼（Rob Delaney）、馬修·麥費狄恩（Matthew
+                            Macfadyen）、艾瑪可林（Emma Corrin）、珍妮佛嘉納（Jennifer Garner）、莫蓮娜史提芬·卡皮契（芭卡琳（Morena
+                            Baccarin）、忽那汐里（Shiori Kutsuna）、史提芬·卡皮契（Stefan Kapicic）、萊斯莉·奧加姆斯（Leslie Uggams）、卡蘭·索尼（Karan
+                            Soni）、布莉安娜（Brianna Hildebrand）
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start mb-5">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(260, 84%, 43%)">
+                            <i class="fas fa-photo-film fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">製作</p>
+                          <p class="text-muted mb-0">
+                            《死侍與金鋼狼》（英語：Deadpool &
+                            Wolverine，中國大陸譯《死侍與金剛狼》，香港譯《死侍與狼人》）是一部2024年美國超級英雄電影，改編自漫威漫畫旗下角色死侍以及金鋼狼，由漫威影業、最大努力和21圈娛樂共同製作、華特迪士尼工作室電影發行。該片為2018年電影《死侍2》的續集，同時是「漫威電影宇宙」的第34部電影作品，屬於漫威電影宇宙第五階段。
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0">
+                          <div class="p-3 rounded-4 shadow-2-strong" style="background-color: hsl(260, 84%, 43%)">
+                            <i class="fas fa-video fa-lg text-white fa-fw"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1 ms-4">
+                          <p class="fw-bold mb-1">拍攝</p>
+                          <p class="text-muted mb-0">
+                            該片於2023年5月22日在倫敦開始進行主體拍攝。此前，拍攝曾預計將於2023年1月和4月左右開始進行。拍攝期間，據報導珍妮佛·嘉納回歸飾演「幻影殺手」艾麗崔·納崔斯，此前她在2003年電影《夜魔俠》以及其2005年外傳電影《幻影殺手》中出演相應角色。拍攝於2023年7月14日因2023年美國編劇協會大罷工暫停。
+
+                            隨著罷工結束，製作正式於11月23日復工。12月初，片場照揭露，劍齒虎和蛤蟆人將於片中出現。雷諾斯不久後發表聲明，表示某些媒體報導「給每個人帶來麻煩」，並希望媒體和社交網站不要發布尚未完成、包含劇透的照片，「盡可能為觀眾保留驚喜，以及讓成片和大銀幕體驗保留魔力」。拍攝於2024年1月24日殺青。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Section: Design Block -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-mdb-ripple-init
+                  data-mdb-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------s07------------ -->
+      <div id="s07">
+        <br><br><br><br>
+      </div>
+
+      <section class="mb-10">
+        <div class="container">
+          <div class="row gx-0 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div style="background: hsla(0, 0%, 100%, 0.55);
+                        backdrop-filter: blur(30px);
+                        z-index: 1;" class="card rounded-7 me-lg-n5" data-mdb-animation-init
+                data-mdb-animation-start="onScroll" data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false"
+                data-mdb-animation-delay="600">
+                <div class="card-body p-lg-5 shadow-5">
+                  <h2 class="fw-bold">
+                    <span class="text-primary">到我們為止</span>
+                  </h2>
+                  <p class="fw-bold"><em>TALES OF TAIPEI</em></p>
+
+                  <p class="text-muted mb-4">
+                    莉莉布隆從小就經歷過很多磨練，但是這沒有阻止她追尋她的夢想。住在波士頓的她認識了一位神經外科醫生萊爾，正當她以為美好的人生終於要開始時，高中的初戀男友亞特拉斯忽然又出現在她的生命中，她與萊爾之間的關係變得更加複雜了。
+                  </p>
+                  <p class="text-muted">
+                    「花邊教主」布蕾克萊芙莉終於推出新片，雖然前不久才在老公主演的《死侍與金鋼狼》中火辣客串，但距離她先前主演的電影《復仇謎奏》、《失蹤網紅》已經許久沒看到她新作，因此以備受矚目的《到我們為止》華麗回歸，格外讓人期待。
+
+                    布蕾克萊芙莉主演的莉莉，克服了成長磨難，離開原生家庭到波士頓展開人生新歷程，開立了「莉莉布隆花坊」。
+
+                    在事業起飛的同時，她遇到了帥氣迷人的神經外科醫師萊爾，在兩人陷入熱戀之際，莉莉卻偶然發現萊爾不為人知的面向……也在這個時候，莉莉再度與初戀情人亞特拉斯相遇，也讓莉莉跟萊爾的戀情投下未爆彈。
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6 mb-5 mb-lg-0">
+
+              <div class="bg-image hover-overlay rounded-7 shadow-4 rotate-lg" data-mdb-animation-init
+                data-mdb-animation-start="onScroll" data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false"
+                data-mdb-animation-delay="200" data-mdb-animation-offset="300">
+                <img src="img/Picture1_0.jpg" class="w-100" alt="" />
+                <div class="mask" style="background: linear-gradient(
+                                       45deg,
+                                       hsla(169, 84.5%, 52%, 0.3),
+                                       hsla(263, 87.7%, 44.7%, 0.3) 100%
+                                       )">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5 mb-lg-10">
+        <div class="row gx-5">
+          <div class="col-lg-7 mb-5 mb-lg-0">
+            <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel"
+              data-mdb-carousel-init>
+              <div class="carousel-indicators">
+                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner rounded-6 shadow-4-strong">
+                <div class="carousel-item active">
+                  <img src="img/1_1.jpg.jfif" class="d-block w-100" alt="Sunset Over the City" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>設備</h5>
+                    <p>本館放映機皆為RGB雷射投影，影廳規劃計9座放映廳，可提供工作坊、座談、論壇、記者發表會、企業及貴賓專屬包場等多元化的應用。</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="img/1_2.jpg.jfif" class="d-block w-100" alt="Canyon at Nigh" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Cine Art 藝術主題影廳</h5>
+                    <p>「Cine Art」影廳：以國際影展類型主題內容發展年度節目，佐以地方藝文內容發展計畫以及國際影展策展單位合作，增加大台中地區多元觀影內容，並透過主題座談舉辦，增廣觀影視野。</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="img/2_2.jpg" class="d-block w-100" alt="Cliff Above a Stormy Sea" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Cine Anime 動畫主題影廳</h5>
+                    <p>「Cine Anime」影廳：以動畫影片為主題影廳，透過年度策展計畫、地區主題活動合作以及親子手作教學等活動策畫，提供365天不斷線之主題節目。</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample"
+                data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample"
+                data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <h3 class="fw-bold mb-4">王牌映画影城</h3>
+            <p>王牌映画影城-廣三SOGO店，座落於廣三SOGO百貨18樓，比鄰素有「台中藝術走廊」之稱的綠園草悟道上，同時也是全台唯一擁有最高視角的影城，一覽台中最美精華街景。
+              本館放映機皆為RGB雷射投影，影廳規劃計9座放映廳，可提供工作坊、座談、論壇、記者發表會、企業及貴賓專屬包場等多元化的應用。有因地緣優勢，其中特別規畫兩座台中獨具特色內容主題影廳「Cine
+              Anime」以及「Cine Art」，以文化創意視角出發，規劃系列特色內容，包括：國內外參展電影作品、獨立製片、華文創作電影、紀錄片、動畫等相關主題放映，同時也將不定期結合文創資源舉辦跨界溝通平台活動。</p>
+            <p class="mb-2"><strong>交通指南：</strong></p>
+
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>自行開車</li>
+              <li><i class="fas fa-xmark text-success me-2"></i>搭乘高鐵</li>
+              <li><i class="fas fa-check text-success me-2"></i>搭乘公車</li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------s08------------ -->
+      <div id="s08">
+        <br><br><br><br>
+      </div>
+
+      <section class="mb-10 text-center">
+        <h2 class="fw-bold mb-7 text-center">熱門影音串流平台</h2>
+        <div class="row gx-lg-5">
+          <div class="col-lg-4 mb-5 mb-lg-0 h-100">
+            <div data-mdb-animation-init data-mdb-animation-start="onScroll" data-mdb-animation="fade-in"
+              data-mdb-animation-show-on-load="false" data-mdb-animation-delay="200">
+              <div class="rounded-7 p-4 shadow-3" style="background-color: hsl(218, 62.2%, 95%)">
+                <hr class="hr hr-blurry">
+                <p class="text-muted mt-4 mb-2">HBO Asia</p>
+                <p class="h5 mb-4 text-primary">HBO GO</p>
+                <p class="pb-4 mb-4">
+                  威秀影城官方APP全面進化購票消費體驗！「行動票券」購票後免排隊取票，手機直接進場最方便！此外，iShow會員訂票免卡一機搞定。
+                </p>
+              </div>
+              <img src="img/HBO GO.webp" class="w-100 rounded-7 mt-n5 shadow-5-strong" style="max-width: 100px"
+                alt="Avatar" />
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-5 mb-lg-0 h-100">
+            <div data-mdb-animation-init data-mdb-animation-start="onScroll" data-mdb-animation="fade-in"
+              data-mdb-animation-show-on-load="false" data-mdb-animation-delay="400">
+              <div class="rounded-7 p-4 shadow-3" style="background-color: hsl(218, 62.2%, 95%)">
+                <hr class="hr hr-blurry">
+                <p class="text-muted mt-4 mb-2">Netflix, Inc.</p>
+                <p class="h5 mb-4 text-primary">Netflix</p>
+                <p class="pb-4 mb-4">
+                  想找來自全世界，大家都在聊的節目與電影嗎？所有精彩內容全在 Netflix。
+                  我們擁有獲獎肯定的影集、電影、紀錄片和脫口秀特輯。
+                </p>
+              </div>
+              <img src="img/Netflix.webp" class="w-100 rounded-7 mt-n5 shadow-5-strong" style="max-width: 100px"
+                alt="Avatar" />
+            </div>
+          </div>
+
+          <div class="col-lg-4 h-100">
+            <div data-mdb-animation-init data-mdb-animation-start="onScroll" data-mdb-animation="fade-in"
+              data-mdb-animation-show-on-load="false" data-mdb-animation-delay="600">
+              <div class="rounded-7 p-4 shadow-3" style="background-color: hsl(218, 62.2%, 95%)">
+                <hr class="hr hr-blurry">
+                <p class="text-muted mt-4 mb-2">Disney</p>
+                <p class="h5 mb-4 text-primary">Disney+</p>
+                <p class="pb-4 mb-4">
+                  播放《曼達洛人》、《洛基》、《大熊餐廳》等必看原創內容，《魔法滿屋》、《阿凡達》、《星際異攻隊》等票房大作。
+                </p>
+              </div>
+              <img src="img/Disney+.avif" class="w-100 rounded-7 mt-n5 shadow-5-strong" style="max-width: 100px"
+                alt="Avatar" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------s09------------ -->
+      <div id="s09">
+        <br><br><br><br>
+      </div>
+
+      <section class="mb-10 text-center">
+        <div class="container">
+          <div class="row gx-0 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+
+              <div style="background: hsla(0, 0%, 100%, 0.55); 
+                        backdrop-filter: blur(30px);
+                        z-index: 1;" class="card rounded-7 me-lg-n5" data-mdb-animation-init
+                data-mdb-animation-start="onScroll" data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false"
+                data-mdb-animation-delay="500">
+                <div class="card-body p-lg-5 shadow-5">
+                  <form>
+                    <div class="form-outline mb-4" data-mdb-input-init>
+                      <input type="text" id="form4Example1" class="form-control" />
+                      <label class="form-label" for="form4Example1">姓名</label>
+                    </div>
+
+                    <div class="form-outline mb-4" data-mdb-input-init>
+                      <input type="email" id="form4Example2" class="form-control" />
+                      <label class="form-label" for="form4Example2">Email</label>
+                    </div>
+
+                    <div class="form-outline mb-4" data-mdb-input-init>
+                      <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                      <label class="form-label" for="form4Example3">內容</label>
+                    </div>
+
+                    <div class="form-check d-flex justify-content-center mb-4">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
+                      <label class="form-check-label" for="form4Example4">
+                        我想收到最新的資訊
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mb-4" data-mdb-ripple-init>送出</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="ratio ratio-1x1" data-mdb-animation-init data-mdb-animation-start="onScroll"
+                data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false" data-mdb-animation-delay="200"
+                data-mdb-animation-offset="200">
+                <iframe class="shadow-3-strong rounded-7"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14560.303966118216!2d120.6091775982061!3d24.169067562006415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e048d342aa9%3A0x2b6f18a6783fa3b!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5Lit5b2w5oqV5YiG572y77yI6Ie65Lit6IG36KiT5bGA77yJ!5e0!3m2!1szh-TW!2stw!4v1724730856003!5m2!1szh-TW!2stw"
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------s10------------ -->
+      <div class="container">
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <i class="fas fa-gem me-3"></i>台中電影資訊網
+                </h6>
+                <p>
+                  最新電影資訊都在台中電影資訊網
+                </p>
+              </div>
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  台中連鎖影城
+                </h6>
+                <p>
+                  <a href="https://www.vscinemas.com.tw/" class="text-reset">威秀影城</a>
+                </p>
+                <p>
+                  <a href="https://www.skcinemas.com/" class="text-reset">新光影城</a>
+                </p>
+                <p>
+                  <a href="https://www.showtimes.com.tw/" class="text-reset">秀泰影城</a>
+                </p>
+                <p>
+                  <a href="https://www.in89cinemax.com/theater_detail.aspx?TheaterId=15&Tdetail=1&id=15"
+                    class="text-reset">in89豪華影城</a>
+                </p>
+              </div>
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  其他影城
+                </h6>
+                <p>
+                  <a href="https://www.acecinema.com.tw/" class="text-reset">王牌映画影城</a>
+                </p>
+                <p>
+                  <a href="https://www.srm.com.tw/" class="text-reset">日日新影城</a>
+                </p>
+                <p>
+                  <a href="http://www.ccmovie.com.tw/" class="text-reset">親親戲院</a>
+                </p>
+                <p>
+                  <a href="https://www.timescinema.com.tw/times.php" class="text-reset">清水時代影城</a>
+                </p>
+              </div>
+
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class="fas fa-home me-3"></i>中彰投分署雲端班</p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  info@example.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i>04-23592181</p>
+                <p><i class="fas fa-print me-3"></i>04-23590878</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ------------s11------------ -->
+  <footer class="text-center" style="background-color: hsl(218, 62.2%, 95%)">
+    <div class="container py-4" data-mdb-animation-init data-mdb-animation-start="onScroll" data-mdb-animation="fade-in"
+      data-mdb-animation-show-on-load="false" data-mdb-animation-delay="200">
+
+      <a class="btn text-white btn-floating m-2" style="background-color: #3b5998;" href="#!" role="button"><i
+          class="fab fa-facebook-f"></i></a>
+
+      <a class="btn text-white btn-floating m-2" style="background-color: #55acee;" href="#!" role="button"><i
+          class="fab fa-twitter"></i></a>
+
+      <a class="btn text-white btn-floating m-2" style="background-color: #dd4b39;" href="#!" role="button"><i
+          class="fab fa-google"></i></a>
+
+      <a class="btn text-white btn-floating m-2" style="background-color: #ac2bac;" href="#!" role="button"><i
+          class="fab fa-instagram"></i></a>
+
+      <a class="btn text-white btn-floating m-2" style="background-color: #0082ca;" href="#!" role="button"><i
+          class="fab fa-linkedin-in"></i></a>
+
+      <a class="btn text-white btn-floating m-2" style="background-color: #333333;" href="#!" role="button"><i
+          class="fab fa-github"></i></a>
+    </div>
+
+    <!-- ------------s12------------ -->
+    <div class="text-center p-3" style="background-color: hsla(218, 62.2%, 35%, 0.2)" data-mdb-animation-init
+      data-mdb-animation-start="onScroll" data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false"
+      data-mdb-animation-delay="300">
+      © 2024 Copyright:
+      <a class="text-dark" href="#">2024.8 雲端班</a>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+  <script data-fa-detection-ignore type="text/javascript">
+    window.FontAwesomeDetection = {
+      timeout: 1000,
+      report: function (params) {
+      }
+    }
+  </script>
+  <script type="text/javascript" src="https://example.com/fontawesome/v6.6.0/js/conflict-detection.js"></script>
+  <script type="text/javascript" src="https://example.com/fontawesome/v6.6.0/js/conflict-detection.js"
+    data-fa-detection-timeout="12345"></script>
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+  <script src="../../js/wow.min.js"></script>
+  <script type="text/javascript">
+    const navbar = document.getElementById("main-navbar");
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 0) {
+        navbar.classList.add("navbar-after-scroll")
+      } else {
+        navbar.classList.remove("navbar-after-scroll")
+      }
+    })
+  </script>
+</body>
+
+</html>
